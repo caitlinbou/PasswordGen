@@ -1,8 +1,10 @@
-#Password Generation Project
+#Password-Gen
 
-In this project I worked with alerts and confirms inside of a function to identify what password criteria the user wished to use for a randomly generated secure password (within a certain parameter for the length of the password), and to use that information to generate said password.
+User may generate a random password based on user selected criteria.
 
-After creating an array of the user's character type selections, I used the Math.random function to pull out random index numbers with values matching the user selections, and concatenated the associated values into a string of the user-selected length to display for the user. 
+## User Story
+Given that I want a random password, I may select the criteria that I wish that password to meet. Once my criteria is selected, I will be given a random password that meets selected parameters.
 
-I have attached screen shots to show the functionality. 
+## Screenshot
+![Screenshot:](Screenshots\homePage.png)
 
