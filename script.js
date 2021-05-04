@@ -1,17 +1,17 @@
-// Assignment Code
-var generateBtn = document.querySelector("#generate");
+// select button
+let generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+  let password = generatePassword();
+  let passwordText = document.querySelector("#password");
 
   passwordText.value = password;
 }
-// Add event listener to generate button
+// Add event listener to button
 generateBtn.addEventListener("click", writePassword);
 
-var lower = [
+let lower = [
   "a",
   "b",
   "c",
@@ -39,7 +39,7 @@ var lower = [
   "y",
   "z",
 ];
-var upper =
+let upper =
   ["A",
   "B",
   "C",
@@ -68,8 +68,8 @@ var upper =
   "Z"
 ];
 
-var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-var special = [
+let numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let special = [
   " ",
   "!",
   "#",
@@ -101,16 +101,15 @@ var special = [
   "}",
   "~",
 ]; 
-  var criteria = [];
-  var length; 
-  var chkLower;
-  var chkUpper;
-  var chkNumber;
-  var chkSpecial;
+  let criteria = [];
+  let length; 
+  let chkLower;
+  let chkUpper;
+  let chkNumber;
+  let chkSpecial;
 
 function generatePassword() {
-  var finalPassword = ""
-  criteria = []
+  let buildPassword = ""
 
   length = prompt(
     "Please select a password length of at least 8 characters, but no longer than 128"
@@ -140,10 +139,10 @@ function generatePassword() {
   if (chkSpecial){
   criteria = criteria.concat(special);
   };
-  for (var i = 0; i < length; i++) {
-    var randomNumberGen = Math.floor(Math.random() * criteria.length);
-    finalPassword = (finalPassword + criteria[randomNumberGen]);
-    password = finalPassword;
+  for (let i = 0; i < length; i++) {
+    let randomNumberGen = Math.floor(Math.random() * criteria.length);
+    buildPassword = (buildPassword + criteria[randomNumberGen]);
+    password = buildPassword;
   }
   // when complete this will write the password into the HTML
   document.getElementById("password").innerHTML = password; 
